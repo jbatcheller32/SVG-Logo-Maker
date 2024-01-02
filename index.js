@@ -1,10 +1,14 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const Circle = require('./lib/shapes');
+const Circle = require('./lib/circle');
+const Square = require('./lib/square');
+const Triangle = require('./lib/triangle'); 
 
 
-inquirer
-.prompt(
+// prompts for the user to create their desired logo
+
+
+const options =  [(
 
         {
             type: 'input',
@@ -32,15 +36,30 @@ inquirer
         }
 
 )
+    ]
 
+    //function to write the file for SVG logo
 
+    function writeToFile(fileName, data) {
 
-        .then((responses) => { 
-
-            
-
-            fs.writeFile('logo.svg', responses.toString(), (err) => {
-                err ? console.log(err) : console.log('Creating your SVG logo...')
-            })
+        fs.writeFile(fileName, data, (err) => {
+            err ? console.error(err) : console.log('Creating your SVG logo...')
         })
+    }; 
+
+
+// function to initialize the questions and responses
+
+    function init() {
+
+        
+    
+        inquirer.prompt(options)
+        .then((response) => {
+            writeToFile('logo.svg', Circle(response));
+        })
+    
+    };
+    
+    init();
 
