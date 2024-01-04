@@ -9,9 +9,9 @@ To use this node.js app, you would need to have Inquirer installed so thay you c
 
 # Links
 
-Repo lnk: https://github.com/jbatcheller32/SVG-Logo-Maker
+Repo link: https://github.com/jbatcheller32/SVG-Logo-Maker
 
-Demo link: 
+Demo link:  https://drive.google.com/file/d/1TRlD1jVd9kY5DOYApvJ84GcMMlpxHdD0/view
 
 # Screen Shots
 
